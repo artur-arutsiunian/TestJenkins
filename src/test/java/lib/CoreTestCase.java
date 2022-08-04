@@ -17,7 +17,7 @@ public class CoreTestCase {
     @Before
     @Step("Run driver and session")
     public void SetUp(){
-       System.setProperty("webdriver.chrome.driver","/Users/arturarutsiunian/Documents/ZegoalWeb/src/main/resources/chromedriver");
+       System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
 
         Map<String, Object> prefs = new HashMap<String, Object>();
         prefs.put("profile.default_content_setting_values.notifications", 2);
