@@ -79,7 +79,7 @@ public class EditAsset extends MainPageObject {
         this.assertElementHasAttribute(
                 By.xpath(ASSET_INTERNAL_ADDRESS_IS_CHANGED),
                 "value",
-                "stree",
+                "street",
                 "can't confirm that asset name is changed"
         );
     }
