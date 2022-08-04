@@ -80,7 +80,7 @@ public class EditAsset extends MainPageObject {
                 By.xpath(ASSET_INTERNAL_ADDRESS_IS_CHANGED),
                 "value",
                 "street",
-                "can't confirm that asset name is changed"
+                "can't confirm that asset name is changed "
         );
     }
 }
