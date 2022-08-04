@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class CoreTestCase {
 
@@ -17,7 +18,13 @@ public class CoreTestCase {
     @Before
     @Step("Run driver and session")
     public void SetUp(){
-       System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
+        if (Objects.equals(System.getProperty("os.name"), "Mac OS X")){
+            System.setProperty("webdriver.chrome.driver","src/main/resources/mac-chromedriver");
+        } else
+        {
+            System.setProperty("webdriver.chrome.driver","src/main/resources/linux-chromedriver");
+        }
+
 
         Map<String, Object> prefs = new HashMap<String, Object>();
         prefs.put("profile.default_content_setting_values.notifications", 2);
